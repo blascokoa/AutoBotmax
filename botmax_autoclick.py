@@ -79,9 +79,17 @@ def main():
         pyautogui.click(x=random.uniform(buy_button_x_bottom, buy_button_x_top), y=random.uniform(buy_button_y_top,
                                     buy_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
 
+        time.sleep(random.uniform(1, 1.5))
         # Cancel
-        pyautogui.click(x=random.uniform(cancel_button_x_bottom, cancel_button_x_top), y=random.uniform(cancel_button_y_top,
-                                    cancel_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
+        pyautogui.click(x=random.uniform(cancel_button_x_bottom, cancel_button_x_top),
+                        y=random.uniform(cancel_button_y_top,
+                                         cancel_button_y_bottom), clicks=clicks, interval=secs_between_clicks,
+                        button='left')
+        time.sleep(random.uniform(1, 1.5))
+        pyautogui.click(x=random.uniform(confirm_cancel_button_x_bottom, confirm_cancel_button_x_top),
+                        y=random.uniform(confirm_cancel_button_y_top, confirm_cancel_button_y_bottom),
+                        clicks=clicks, interval=secs_between_clicks,
+                        button='left')
 
         # Sell serie
         time.sleep(random.uniform(1, 1.5))
