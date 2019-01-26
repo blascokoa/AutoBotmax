@@ -57,6 +57,12 @@ def main():
     input("Put the cursor on the CANCELL BUTTON ON TOP LEFT and press ENTER")
     cancel_button_x_top, cancel_button_y_top = pyautogui.position()
     print(f"Coordinate recorded: {cancel_button_x_top},{cancel_button_y_top}")
+    input("Put the cursor on the CONFIRM CANCELL BUTTON ON BOTTOM RIGHT and press ENTER")
+    confirm_cancel_button_x_bottom, confirm_cancel_button_y_bottom = pyautogui.position()
+    print(f"Coordinate recorded: {confirm_cancel_button_x_bottom},{confirm_cancel_button_y_bottom}")
+    input("Put the cursor on the CONFIRM CANCELL BUTTON ON TOP LEFT and press ENTER")
+    confirm_cancel_button_x_top, confirm_cancel_button_y_top = pyautogui.position()
+    print(f"Coordinate recorded: {confirm_cancel_button_x_top},{confirm_cancel_button_y_top}")
     secs_between_clicks = random.uniform(0.1, 0.5)
     secs_between_clicks = 0
     clicks = 1
@@ -65,10 +71,7 @@ def main():
     print("----- Credits to @dblama ----- ")
 
     for i in range(loops):
-
-
         # Buy serie
-
         pyautogui.click(x=buy_price_x, y=buy_price_y, clicks=clicks, interval=secs_between_clicks, button='left')
         time.sleep(random.uniform(0.2, 0.5))
         pyautogui.click(x=buy_size_x, y=buy_size_y, clicks=clicks, interval=secs_between_clicks, button='left')
@@ -93,6 +96,10 @@ def main():
         # Cancel
         pyautogui.click(x=random.uniform(cancel_button_x_bottom, cancel_button_x_top), y=random.uniform(cancel_button_y_top,
                                     cancel_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
+        pyautogui.click(x=random.uniform(confirm_cancel_button_x_bottom, confirm_cancel_button_x_top),
+                        y=random.uniform(confirm_cancel_button_y_top, confirm_cancel_button_y_bottom),
+                        clicks=clicks, interval=secs_between_clicks,
+                        button='left')
 
         print(f"Running the loop {i+1} of {loops}")
 
