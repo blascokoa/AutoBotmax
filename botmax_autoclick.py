@@ -73,9 +73,9 @@ def main():
     for i in range(loops):
         # Buy serie
         pyautogui.click(x=buy_price_x, y=buy_price_y, clicks=clicks, interval=secs_between_clicks, button='left')
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=buy_size_x, y=buy_size_y, clicks=clicks, interval=secs_between_clicks, button='left')
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=random.uniform(buy_button_x_bottom, buy_button_x_top), y=random.uniform(buy_button_y_top,
                                     buy_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
 
@@ -84,22 +84,24 @@ def main():
                                     cancel_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
 
         # Sell serie
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=sell_price_x, y=sell_price_y, clicks=clicks, interval=secs_between_clicks, button='left')
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=sell_size_x, y=sell_size_y, clicks=clicks, interval=secs_between_clicks, button='left')
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=random.uniform(sell_button_x_top, sell_button_x_bottom), y=random.uniform(sell_button_y_top,
                                     sell_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
-        time.sleep(random.uniform(0.2, 0.5))
+        time.sleep(random.uniform(1, 1.5))
 
         # Cancel
         pyautogui.click(x=random.uniform(cancel_button_x_bottom, cancel_button_x_top), y=random.uniform(cancel_button_y_top,
                                     cancel_button_y_bottom), clicks=clicks, interval=secs_between_clicks, button='left')
+        time.sleep(random.uniform(1, 1.5))
         pyautogui.click(x=random.uniform(confirm_cancel_button_x_bottom, confirm_cancel_button_x_top),
                         y=random.uniform(confirm_cancel_button_y_top, confirm_cancel_button_y_bottom),
                         clicks=clicks, interval=secs_between_clicks,
                         button='left')
+        time.sleep(random.uniform(1, 1.5))
 
         print(f"Running the loop {i+1} of {loops}")
 
