@@ -4,7 +4,7 @@ import random
 
 """
 AutoClick Bot for automate trading on exchanges where there isn't available an api to trade
-Use this bot don't ensure you make profits. 
+Use this bot doesn't ensure you make profits, use it under your own responsability.
 Credits of the bot to @dblama
 """
 
